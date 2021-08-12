@@ -76,7 +76,8 @@ header.transparent {
 }
 .header__wrapper,
 .profile__wrapper,
-.games__wrapper {
+.games__wrapper,
+.data__wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -149,17 +150,24 @@ header.transparent {
 .games__wrapper {
   flex-wrap: wrap;
 }
-.games__descriptions {
+.games__descriptions,
+.data__descriptions {
   width: 100%;
   margin-bottom: var(--spaceLarge);
 }
-.games__descriptions h1 {
+.games__descriptions h1,
+.data__descriptions h2,
+.data__victories h3,
+.data__matchs h4,
+.data__history h5,
+.data__time h6 {
   font-family: 'glacial_indifference_bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.8rem;
   margin-bottom: var(--spaceMedium);
   text-align: center;
 }
-.games__descriptions p {
+.games__descriptions p,
+.data__descriptions p {
   font-size: 1.1rem;
   font-family: 'glacial_indifference_regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
@@ -222,10 +230,122 @@ header.transparent {
   font-size: 1.2rem;
   margin-top: var(--spaceSmall);
 }
+.data {
+  padding: var(--spaceXXXExtraLarge) var(--spaceMedium);
+}
+.data__wrapper {
+  flex-wrap: wrap;
+}
+.data__players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.data__player {
+  width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.data__player p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'glacial_indifference_regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--black);
+  margin-bottom: var(--spaceLarge);
+}
+.data_percentage {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.data_percentage p:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--darkGrey);
+  font-family: 'glacial_indifference_bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--white);
+  font-size: 1rem;
+  width: 50px;
+  height: 50px;
+}
+.data_percentage p:last-child {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+.data__matchsgrid,
+.data__historygrid {
+  display: flex;
+  justify-content: center;
+}
+.data__matchresults {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--darkGrey);
+  margin-right: var(--spaceExtraSmall);
+}
+.data__matchresults_active {
+  background-color: var(--darkGrey);
+}
+.data__historyresults {
+  width: 25px;
+  height: 30px;
+  border: 1px solid var(--darkGrey);
+  margin: 0 var(--spaceExtraSmall);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'glacial_indifference_regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--black);
+}
+.data__victories,
+.data__matchs,
+.data__history {
+  margin-bottom: var(--spaceXXExtraLarge);
+}
+.data__time {
+  width: 100%;
+}
+.data__time p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'glacial_indifference_regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--black);
+}
 
 @media screen and (min-width: 376px) {
   .header__info p {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .data__middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: var(--spaceXXExtraLarge);
+  }
+  .data__victories {
+    max-width: 300px;
+  }
+  .data__middleright {
+    width: 290px;
+  }
+  .data__matchs {
+    margin-bottom: var(--spaceExtraLarge);
+  }
+  .data__descriptions {
+    margin-bottom: var(--spaceXXXExtraLarge);
   }
 }
 
@@ -302,6 +422,9 @@ header.transparent {
   .games__arcade {
     width: 450px;
     margin: 0 var(--spaceXXExtraLarge);
+  }
+  .data__wrapper {
+    max-width: 800px;
   }
 }
 
