@@ -26,6 +26,8 @@
   const trophyOneMobile = document.querySelector('[data-id="games-trophy-one-mobile"]');
   const trophyTwoMobile = document.querySelector('[data-id="games-trophy-two-mobile"]');
   const data = document.querySelector('.data');
+  const valueSubscribe = document.querySelector('[data-id="subscribe"]');
+  const sendSubscribe = document.querySelector('[data-id="send-subscribe"]');
   const winningConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -355,8 +357,21 @@
             });
   }
 
+  function validSubscribe() {
+    valueSubscribe.addEventListener('input', (e) => {
+      e.preventDefault();
+      const { value } = e.target;
+      const emailPattern =  /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+      if (emailPattern.test(value)){
+        sendSubscribe.disabled = false;
+      } else {
+        sendSubscribe.disabled = true;
+      }
+    })
+  }
+
   cells.forEach(cell => cell.addEventListener('click', handleCellClick));
   reset.addEventListener('click', handleRestartGame);
-
   transparentHeader();
+  validSubscribe();
 })()

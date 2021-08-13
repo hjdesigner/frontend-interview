@@ -409,9 +409,17 @@ footer {
 .footer__subscribe button {
   width: 20%;
   border: 0;
-  background-color: var(--grey);
+  background-color: var(--green);
   height: 40px;
   cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.footer__subscribe button:hover {
+  background-color: var(--blue);
+}
+.footer__subscribe button:disabled {
+  background-color: var(--grey);
+  cursor: default;
 }
 .footer__subscribe button svg {
   width: 25px;
