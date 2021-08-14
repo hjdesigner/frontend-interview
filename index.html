@@ -120,8 +120,8 @@
         <h1>Tic tac toe games</h1>
         <p>Welcome to the best game in the world</p>
         <div class="games__select">
-          <button class="game__tictac game__button_active">Tic tac toe</button>
-          <button class="game__fourinarow">4-in-a-row</button>
+          <button class="game__tictac game__button--active" data-id="tic-tac-toe">Tic tac toe</button>
+          <button class="game__fourinarow" data-id="four-in-a-row">4-in-a-row</button>
         </div>
       </div>
 			<div class="games__turn">
@@ -158,7 +158,7 @@
 					<p data-id="wins-play-one">0</p>
 				</div>
 				<div class="games__arcade">
-					<div class="game__tic__three_by_three__container">
+					<div class="game__tic__three_by_three__container active" data-id="game-tic-three-by-three">
 						<div class="game__tic__three_by_three__actions" data-id="actions-tic-three-by-three">
 							<button class="game__tic__three_by_three__reset" data-id="reset-tic-three-by-three">Restart Game</button>
 						</div>
@@ -172,7 +172,151 @@
 						<div class="game__tic__three_by_three__cell" data-tic-three_by-three-index="7"></div>
 						<div class="game__tic__three_by_three__cell" data-tic-three_by-three-index="8"></div>
 					</div>
-					
+					<div class="game__for_in_a_row__container" data-id="game-four-in-a-row">
+						<div class="game__for_in_row__actions" data-id="actions-for-in-a-row">
+							<button class="game__for_in_row__reset" data-id="reset-for-in-a-row">Restart Game</button>
+						</div>
+						<div class="game__for_in_a_row__column" id="column-0" data-x="0">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div>
+						</div>
+						<div class="game__for_in_a_row__column"  id="column-1" data-x="1">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div> 
+						</div>
+						<div class="game__for_in_a_row__column" id="column-2" data-x="2">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div> 
+						</div>
+						<div class="game__for_in_a_row__column" id="column-3" data-x="3">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div> 
+						</div>
+						<div class="game__for_in_a_row__column" id="column-4" data-x="4">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div> 
+						</div>
+						<div class="game__for_in_a_row__column" id="column-5" data-x="5">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div> 
+						</div>
+						<div class="game__for_in_a_row__column" id="column-6" data-x="6">
+							<div class="circle__wrapper row-5">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-4">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-3">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-2">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-1">
+								<div class="circle free"></div>
+							</div> 
+							<div class="circle__wrapper row-0">
+								<div class="circle free"></div>
+							</div> 
+						</div>
+					</div>
 				</div>
 				<div class="games__arcadeplays">
 					<div class="games__trophy" data-id="games-trophy-two">
@@ -316,71 +460,142 @@
 				</p>
 			</div>
 
-			<div class="data__middle">
-
-				<div class="data__victories">
-					<h3>Game victories %</h3>
-					<div class="data__players">
-						<div class="data__player">
-							<p>Player 1</p>
-							<div class="data_percentage">
-								<p data-id="wins-player-one">0%</p>
-								<p>V</p>
+			<div class="data__three_by_three active" data-id="data-three-by-three">
+				<div class="data__middle">
+					<div class="data__victories">
+						<h3>Game victories %</h3>
+						<div class="data__players">
+							<div class="data__player">
+								<p>Player 1</p>
+								<div class="data_percentage">
+									<p data-id="wins-player-one">0%</p>
+									<p>V</p>
+								</div>
+								<div class="data_percentage">
+									<p data-id="defeats-player-one">0%</p>
+									<p>L</p>
+								</div>
 							</div>
-							<div class="data_percentage">
-								<p data-id="defeats-player-one">0%</p>
-								<p>L</p>
-							</div>
-						</div>
-						<div class="data__player">
-							<p>Player 2</p>
-							<div class="data_percentage">
-								<p data-id="wins-player-two">0%</p>
-								<p>V</p>
-							</div>
-							<div class="data_percentage">
-								<p data-id="defeats-player-two">0%</p>
-								<p>L</p>
+							<div class="data__player">
+								<p>Player 2</p>
+								<div class="data_percentage">
+									<p data-id="wins-player-two">0%</p>
+									<p>V</p>
+								</div>
+								<div class="data_percentage">
+									<p data-id="defeats-player-two">0%</p>
+									<p>L</p>
+								</div>
 							</div>
 						</div>
 					</div>
+		
+					<div class="data__middleright">
+						<div class="data__matchs">
+							<h4>Player matchs</h4>
+							<div class="data__matchsgrid">
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+								<div class="data__matchresults"></div>
+							</div>
+						</div>
+						<div class="data__history">
+							<h5>Game history</h5>
+							<div class="data__historygrid">
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+								<div class="data__historyresults"></div>
+							</div>
+						</div>
+					</div>
+		
 				</div>
-	
-				<div class="data__middleright">
-					<div class="data__matchs">
-						<h4>Player matchs</h4>
-						<div class="data__matchsgrid">
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-							<div class="data__matchresults"></div>
-						</div>
-					</div>
-					<div class="data__history">
-						<h5>Game history</h5>
-						<div class="data__historygrid">
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-							<div class="data__historyresults"></div>
-						</div>
-					</div>
+				<div class="data__time">
+					<h6>Total time</h6>
+					<p data-id="total-time">00:00:00</p>
 				</div>
-	
 			</div>
-			<div class="data__time">
-				<h6>Total time</h6>
-				<p data-id="total-time">00:00:00</p>
+
+
+
+			<div class="data__four_in_a_row" data-id="data-four-in-a-row">
+				<div class="data__middle">
+					<div class="data__victories">
+						<h3>Game victories %</h3>
+						<div class="data__players">
+							<div class="data__player">
+								<p>Player 1</p>
+								<div class="data_percentage">
+									<p data-id="wins-player-one-four-in-a-row">0%</p>
+									<p>V</p>
+								</div>
+								<div class="data_percentage">
+									<p data-id="defeats-player-one-four-in-a-row">0%</p>
+									<p>L</p>
+								</div>
+							</div>
+							<div class="data__player">
+								<p>Player 2</p>
+								<div class="data_percentage">
+									<p data-id="wins-player-two-four-in-a-row">0%</p>
+									<p>V</p>
+								</div>
+								<div class="data_percentage">
+									<p data-id="defeats-player-two-four-in-a-row">0%</p>
+									<p>L</p>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+					<div class="data__middleright">
+						<div class="data__matchs">
+							<h4>Player matchs</h4>
+							<div class="data__matchsgrid">
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+								<div class="data__matchresults-four-in-a-row"></div>
+							</div>
+						</div>
+						<div class="data__history">
+							<h5>Game history</h5>
+							<div class="data__historygrid">
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+								<div class="data__historyresults-four-in-a-row"></div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+				<div class="data__time">
+					<h6>Total time</h6>
+					<p data-id="total-time-four-in-a-row">00:00:00</p>
+				</div>
 			</div>
 		</div>
 	</section>
