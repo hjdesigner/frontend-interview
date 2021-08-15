@@ -72,6 +72,7 @@ header {
   padding: var(--spaceLarge) var(--spaceMedium);
   background-color: var(--grey);
   position: fixed;
+  z-index: 2;
 }
 header.transparent {
   background-color: var(--transparentHeader);
